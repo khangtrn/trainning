@@ -45,9 +45,9 @@ for filter_3 in filters:
                         history = model.fit(X, y, epochs=NUM_EPOCHS, validation_data=(X_test, y_test), batch_size=BATCH_SIZE)
                         model.summary()
                         result = model.evaluate(X_test, y_test, batch_size=BATCH_SIZE)
-                        results[f"2TDCNN2CNN3D_{filter_1}_{filter_2}_{filter_3}_{filter_4}_{kernel_size_1}_{kernel_size_2}_{kernel_size_3}_{kernel_size_4}_loss"] = result[0]
-                        results[f"2TDCNN2CNN3D_{filter_1}_{filter_2}_{filter_3}_{filter_4}_{kernel_size_1}_{kernel_size_2}_{kernel_size_3}_{kernel_size_4}_acc"] = result[1]
+                        results[f"2TDCNN2CNN7D_{filter_1}_{filter_2}_{filter_3}_{filter_4}_{kernel_size_1}_{kernel_size_2}_{kernel_size_3}_{kernel_size_4}_loss"] = result[0]
+                        results[f"2TDCNN2CNN7D_{filter_1}_{filter_2}_{filter_3}_{filter_4}_{kernel_size_1}_{kernel_size_2}_{kernel_size_3}_{kernel_size_4}_acc"] = result[1]
 
-with open(f"2TDCNN2CNN3D_{filter_1}_{filter_2}.json", "w") as outfile:
+with open(f"2TDCNN2CNN7D_{filter_1}_{filter_2}.json", "w") as outfile:
     json.dump(results, outfile)
 
